@@ -1,48 +1,54 @@
 package LinkedList;
-import java.util.Scanner;
-class ListNode3 {
-    int val;
-    ListNode3 next;
-    ListNode3(int val) {
-        this.val = val;
+import java.util.*;
+class DeleteFromNthEnd{
+    public static class Node{
+        int data;
+        Node next;
+        public Node(int val){
+            this.data = val;
+            this.next = null;
+        }
     }
-}
-class Solution5 {
-    public ListNode3 removeNthFromEnd(ListNode3 head, int n) {
-        ListNode3 dummy = new ListNode3(0);
-        dummy.next = head;
-        ListNode3 first = dummy;
-        ListNode3 last = dummy;
-        for (int i = 0; i <= n; i++) {
-            first = first.next;
+    public Node removeNthFromEnd(Node head, int n){
+        Node slow = head;
+        Node fast = head;
+        for(int i=1;i<=n;i++){
+            fast = fast.next;
         }
-        while (first != null) {
-            first = first.next;
-            last = last.next;
+        if(fast==null) {
+            return head.next;
         }
-        last.next = last.next.next;
-        return dummy.next;
+        while(fast.next!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        slow.next=slow.next.next;
+        return head;
     }
-}
-public class DeleteFromNthEnd {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-
-        ListNode3 head = new ListNode3(sc.nextInt());
-        ListNode3 current = head;
-        for (int i = 1; i < size; i++) {
-            current.next = new ListNode3(sc.nextInt());
-            current = current.next;
-        }
-
-        Solution5 sol = new Solution5();
-        head = sol.removeNthFromEnd(head, 2);
-
-        ListNode3 temp = head;
+    public static void printList(Node head) {
+        Node temp = head;
         while (temp != null) {
-            System.out.print(temp.val + " ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
+        System.out.println();
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of LL: ");
+        int len = sc.nextInt();
+        System.out.print("Enter the LL elements: ");
+        Node head = new Node(sc.nextInt());
+        Node current = head;
+        for (int i = 1; i < len; i++) {
+            current.next = new Node(sc.nextInt());
+            current = current.next;
+        }
+        System.out.print("Enter the Nth pos: ");
+        DeleteFromNthEnd sol = new DeleteFromNthEnd();
+        int n = sc.nextInt();
+        head = sol.removeNthFromEnd(head, n);
+        System.out.print("New LL: ");
+        printList(head);
     }
 }

@@ -12,7 +12,6 @@ public class MiddleOfLinkedList{
     public static Node middleNode(Node head) {
         Node slow = head;
         Node fast = head;
-
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -25,16 +24,14 @@ public class MiddleOfLinkedList{
 
         System.out.print("Enter number of nodes: ");
         int n = sc.nextInt();
-
         if (n <= 0) {
             System.out.println("List is empty.");
             return;
         }
-        System.out.print("Enter node 1 value: ");
+        System.out.print("Enter nodes value: ");
         Node head = new Node(sc.nextInt());
         Node current = head;
-        for (int i = 2; i <= n; i++) {
-            System.out.print("Enter node " + i + " value: ");
+        for (int i = 1; i < n; i++) {
             current.next = new Node(sc.nextInt());
             current = current.next;
         }
