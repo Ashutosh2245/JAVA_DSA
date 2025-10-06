@@ -1,6 +1,6 @@
 package LinkedList;
 import java.util.*;
-class LinkedListCycleLC141{
+class LinkedListCycleIILC142{
     public static class Node {
         int data;
         Node next;
@@ -9,15 +9,23 @@ class LinkedListCycleLC141{
             this.next = null;
         }
     }
-    public static boolean hasCycle(Node head) {
+    public static Node hasCycle(Node head) {
         Node slow = head;
         Node fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if (slow == fast) return true;
+            if (slow == fast) break;
         }
-        return false;
+        if(slow!=fast) return null;
+        else {
+            Node temp = head;
+            while (temp!=slow) {
+                slow=slow.next;
+                temp=temp.next;
+            }
+            return slow;
+        }
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -43,9 +51,9 @@ class LinkedListCycleLC141{
             }
             curr.next = cycleStart;
         }
-        boolean has = hasCycle(head);
-        if(has) System.out.println("true");
-        else System.out.println("false");
+        Node detectCycle = hasCycle(head);
+        if(detectCycle!=null) System.out.println(detectCycle.data);
+        else System.out.println("No Cycle (null)");
     }
 }
 

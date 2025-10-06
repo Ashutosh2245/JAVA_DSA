@@ -1,4 +1,5 @@
 package LinkedList;
+import java.util.Scanner;
 public class RemoveDuplicates {
     public static class ListNode {
         int val;
@@ -26,11 +27,16 @@ public class RemoveDuplicates {
     public static void main(String[] args) {
         RemoveDuplicates rd = new RemoveDuplicates();
 
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(1);
-        head.next.next = new ListNode(2);
-        head.next.next.next = new ListNode(3);
-        head.next.next.next.next = new ListNode(3);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of Linked List: ");
+        int n = sc.nextInt();
+        System.out.print("Enter LL elements: ");
+        ListNode head = new ListNode(sc.nextInt());
+        ListNode curr = head;
+        for (int i = 1; i < n; i++) {
+            curr.next = new ListNode(sc.nextInt());
+            curr = curr.next;
+        }
         System.out.println("Original List:");
         rd.printList(head);
         head = rd.deleteDuplicates(head);
