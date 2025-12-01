@@ -4,7 +4,6 @@ class SumProductArrayUsingStack {
     int top = -1;
     int[] stack;
     int size;
-
     SumProductArrayUsingStack(int size) {
         this.size = size;
         stack = new int[size];
@@ -12,11 +11,9 @@ class SumProductArrayUsingStack {
     void push(int val) {
         stack[++top] = val;
     }
-
     int pop() {
         return stack[top--];
     }
-
     boolean isEmpty() {
         return top == -1;
     }
@@ -41,7 +38,6 @@ public class SumProductArray {
         }
         System.out.println("Sum of elements = " + sum);
         System.out.println("Product of elements = " + product);
-
         sc.close();
     }
 }
