@@ -12,13 +12,16 @@ public class ReverseStackIterative {
         }
         System.out.println("Original Stack: " + st);
         Stack<Integer> temp = new Stack<>();
+        Stack <Integer> st2 = new Stack<>();
         while (!st.isEmpty()) {
             temp.push(st.pop());
         }
-        System.out.println("Reversed Stack: " + temp);
         while (!temp.isEmpty()) {
-            st.push(temp.pop());
+            st2.push(temp.pop());
         }
-        System.out.println("Original(Restored Stack): "+st);
+        while (!st2.isEmpty()){
+            st.push(st2.pop());
+        }
+        System.out.println("Original(Reversed Stack): "+st);
     }
 }

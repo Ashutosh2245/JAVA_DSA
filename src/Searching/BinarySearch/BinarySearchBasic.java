@@ -8,7 +8,6 @@ public class BinarySearchBasic {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-
         int low = 0, high = n-1;
         int target = sc.nextInt();
         boolean flag = false;
@@ -20,7 +19,6 @@ public class BinarySearchBasic {
                 flag = true;
                 break;
             }
-
         }
         if(flag) System.out.println("Found.");
         else System.out.println("Not Found.");

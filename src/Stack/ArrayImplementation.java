@@ -46,21 +46,21 @@ public class ArrayImplementation {
     public static void main(String[] args) {
         Stack st = new Stack();
         st.push(4);
-        st.display();
+        st.display(); // 4
         st.push(5);
-        st.display();
+        st.display(); // 4 5
         st.push(1);
-        st.display();
-        System.out.println("Popped: " + st.pop());
-        st.display();
-        System.out.println("Top element: " + st.peek());
-        System.out.println("Current size: " + st.size());
-        System.out.println(st.isEmpty());
-        System.out.println(st.isFull());
+        st.display(); // 4 5 1
+        System.out.println("Popped: " + st.pop()); // 1
+        st.display(); // 4 5
+        System.out.println("Top element: " + st.peek()); // 5
+        System.out.println("Current size: " + st.size()); // 2
+        System.out.println(st.isEmpty()); // false
+        System.out.println(st.isFull()); // false
         st.push(7);
         st.push(0);
-        System.out.println(st.isFull());
-        st.display();
-        st.push(100);
+        System.out.println(st.isFull()); // true
+        st.display(); // 4 5 7 0
+        st.push(100); // Stack is Full!!
     }
 }

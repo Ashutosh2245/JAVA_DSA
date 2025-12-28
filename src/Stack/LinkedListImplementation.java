@@ -75,5 +75,8 @@ public class LinkedListImplementation {
 
         st.push(100);
         st.display();
+        st.displayRev();
     }
 }
+// LL me insertion aage se hoga kyuki singly LL me aage(head) pe insertion and deletion
+// O(1) me hota hai but tail me O(n) lagta hai.

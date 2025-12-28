@@ -12,7 +12,6 @@ public class linearSearch {
         for (int i = 0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-
         boolean flag = false;  // false means not found.
         for (int i = 0;i<n;i++){
             if (arr[i] == x){
