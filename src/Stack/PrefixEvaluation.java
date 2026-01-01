@@ -10,7 +10,6 @@ public class PrefixEvaluation {
         int result = evaluatePrefix(prefix);
         System.out.println("Evaluated Result: " + result);
     }
-
     static String infixToPrefix(String s) {
         StringBuilder sb = new StringBuilder(s);
         sb.reverse();
@@ -46,7 +45,6 @@ public class PrefixEvaluation {
         }
         return postfix.reverse().toString();
     }
-
     static int evaluatePrefix(String prefix) {
         Stack<Integer> st = new Stack<>();
         for (int i = prefix.length() - 1; i >= 0; i--) {

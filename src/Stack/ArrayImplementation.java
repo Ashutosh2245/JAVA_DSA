@@ -8,7 +8,8 @@ public class ArrayImplementation {
                 System.out.println("Stack is Full!!");
                 return;
             }
-            arr[idx++] = x;
+            arr[idx] = x;
+            idx++;
         }
         int peek() {
             if (isEmpty()) {
