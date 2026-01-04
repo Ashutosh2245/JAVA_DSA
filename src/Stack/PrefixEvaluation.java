@@ -23,6 +23,7 @@ public class PrefixEvaluation {
         StringBuilder postfix = new StringBuilder();
         for (int i = 0; i < sb.length(); i++) {
             char ch = sb.charAt(i);
+            if (ch ==' ') continue;
             if (Character.isDigit(ch)) {
                 postfix.append(ch);
             } else if (ch == '(') {
@@ -49,6 +50,7 @@ public class PrefixEvaluation {
         Stack<Integer> st = new Stack<>();
         for (int i = prefix.length() - 1; i >= 0; i--) {
             char ch = prefix.charAt(i);
+            if (ch ==' ') continue;
             if (Character.isDigit(ch)) {
                 st.push(ch - '0');
             } else {
