@@ -1,7 +1,7 @@
-//Recursive
+// Iterative
 package BST;
 import java.util.*;
-public class SearchInBinarySearchTreeLC700{
+public class SearchInBSTIterative{
     public static class TreeNode {
         int val;
         TreeNode left, right;
@@ -10,15 +10,16 @@ public class SearchInBinarySearchTreeLC700{
         }
     }
     public static TreeNode searchBST(TreeNode root, int val) {
-        if (root == null || root.val == val)
-            return root;
-
-        if (val < root.val)
-            return searchBST(root.left, val);
-        else
-            return searchBST(root.right, val);
+        while (root != null) {
+            if (root.val == val)
+                return root;
+            else if (val < root.val)
+                root = root.left;
+            else
+                root = root.right;
+        }
+        return null;
     }
-
     public static TreeNode buildBST(TreeNode root, int val) {
         if (root == null)
             return new TreeNode(val);
