@@ -5,11 +5,11 @@ public class Finding3DigitEvenNoLC2094 {
         HashMap <Integer, Integer> map = new HashMap<>();
         for(int ele : arr){
             if(map.containsKey(ele)){
-                int freq = map.get(ele);
-                map.put(ele, freq+1);
+                map.put(ele, map.get(ele)+1);
             }
             else map.put(ele, 1);
         }
+
         ArrayList <Integer> ans = new ArrayList <>();
         for(int i = 100; i <= 998; i+=2){
             int x = i;
