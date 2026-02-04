@@ -10,6 +10,7 @@ public class BottomViewOfBT {
             left = right = null;
         }
     }
+
     static class Pair {
         TreeNode node;
         int level;
@@ -19,6 +20,7 @@ public class BottomViewOfBT {
             this.level = level;
         }
     }
+
     static TreeNode buildTree(int[] arr) {
         if (arr.length == 0 || arr[0] == -1)
             return null;
@@ -48,21 +50,15 @@ public class BottomViewOfBT {
 
     static void bottomView(TreeNode root) {
         if (root == null) return;
-
         Map<Integer, Integer> map = new HashMap<>();
         Queue<Pair> q = new LinkedList<>();
-
         q.add(new Pair(root, 0));
-
         int minLevel = 0, maxLevel = 0;
-
         while (!q.isEmpty()) {
             Pair temp = q.remove();
             TreeNode node = temp.node;
             int lvl = temp.level;
-
             map.put(lvl, node.val);
-
             minLevel = Math.min(minLevel, lvl);
             maxLevel = Math.max(maxLevel, lvl);
 

@@ -50,11 +50,8 @@ class Main {
         if (root == null) return;
         Map<Integer, Integer> map = new HashMap<>();
         Queue<Pair> q = new LinkedList<>();
-
         q.add(new Pair(root, 0));
-
         int minLevel = 0, maxLevel = 0;
-
         while (!q.isEmpty()) {
             Pair temp = q.remove();
             TreeNode node = temp.node;
