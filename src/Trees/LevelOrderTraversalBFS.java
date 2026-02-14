@@ -69,10 +69,10 @@ public class LevelOrderTraversalBFS {
         System.out.print("Postorder Traversal: ");
         postorder(a);
         System.out.println();
-        System.out.print("Levelorder Traversal(Left To Right): ");
+        System.out.print("LevelOrder Traversal(Left To Right): ");
         levelOrderLToR(a);
         //System.out.println();
-        System.out.print("Levelorder Traversal(Right To Left): ");
+        System.out.print("LevelOrder Traversal(Right To Left): ");
         levelOrderRToL(a);
     }
 }

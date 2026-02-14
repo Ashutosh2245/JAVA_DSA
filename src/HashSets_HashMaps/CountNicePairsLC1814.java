@@ -5,7 +5,7 @@ public class CountNicePairsLC1814 {
         int count = 0;
         HashMap <Integer, Integer> map = new HashMap<>();
         for(int num : nums){
-            int ele = num- reverse(num);
+            int ele = num - reverse(num);
             if(map.containsKey(ele)){
                 int freq = map.get(ele);
                 count += freq;

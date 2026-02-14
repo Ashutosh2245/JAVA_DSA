@@ -21,6 +21,28 @@ public class PostOrderTraversalIterative {
         Collections.reverse(ans);
         return ans;
     }
+    // Method 2 -- >> 2 Stacks
+    public static void postorderUsingStack(Node root) {
+        if (root == null) return;
+
+        Stack<Node> s1 = new Stack<>();
+        Stack<Node> s2 = new Stack<>();
+
+        s1.push(root);
+
+        while (!s1.isEmpty()) {
+            Node curr = s1.pop();
+            s2.push(curr);
+
+            if (curr.left != null) s1.push(curr.left);
+            if (curr.right != null) s1.push(curr.right);
+        }
+
+        while (!s2.isEmpty()) {
+            System.out.print(s2.pop().val + " ");
+        }
+    }
+
     public static void main(String[] args) {
         Node a = new Node(1);
         Node b = new Node(2);
@@ -32,11 +54,14 @@ public class PostOrderTraversalIterative {
         a.left = b; a.right = c;
         b.left = d; b.right = e;
         c.left = f; c.right = g;
-        System.out.print("Preorder Traversal: ");
+        System.out.print("Postorder Traversal: ");
         List<Integer> ans = postorderItr(a);
         for(int num: ans){
             System.out.print(num+" ");
         }
+        System.out.println();
+        System.out.print("Postorder : ");
+        postorderUsingStack(a);
     }
 }
 // PostOrder is reverse of reverse pre order.
