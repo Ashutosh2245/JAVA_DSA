@@ -75,7 +75,7 @@ public class PathSum2LC113 {
 
         Node root = BuildBT(arr);
 
-        System.out.println("Paths with given sum:");
+        System.out.println("Paths with given sum: ");
         System.out.println(pathSum(root, targetSum));
     }
 }
