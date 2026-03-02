@@ -2,7 +2,7 @@ package Graphs;
 import java.util.*;
 public class BFSAdjacencyList {
     int v;
-    static ArrayList <ArrayList<Integer>> adj;
+    ArrayList <ArrayList<Integer>> adj;
 
     BFSAdjacencyList(int v){
         this.v = v;
@@ -17,7 +17,7 @@ public class BFSAdjacencyList {
         adj.get(v).add(u);
     }
 
-    static void bfs(int start, boolean[] visited){
+    static void bfs(int start, boolean[] visited,ArrayList <ArrayList<Integer>> adj){
         Queue <Integer> q = new LinkedList<>();
         visited[start] = true;
         q.add(start);
@@ -44,7 +44,7 @@ public class BFSAdjacencyList {
         boolean[] visited = new boolean[5];
         for(int i = 0; i < 5; i++){
             if(!visited[i]){
-                bfs(i, visited);
+                bfs(i, visited, g.adj);
             }
         }
 

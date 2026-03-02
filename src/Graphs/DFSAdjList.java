@@ -3,7 +3,7 @@ import java.util.*;
 public class DFSAdjList {
 
     int v;
-    static ArrayList<ArrayList<Integer>> adj;
+    ArrayList<ArrayList<Integer>> adj;
 
     DFSAdjList(int v){
         this.v = v;
@@ -19,14 +19,14 @@ public class DFSAdjList {
         adj.get(v).add(u);   // remove for directed
     }
 
-    static void dfs(int start, boolean[] visited){
+    static void dfs(ArrayList<ArrayList<Integer>> adj,int start, boolean[] visited){
 
         visited[start] = true;
         System.out.print(start + " ");
 
         for(int ele : adj.get(start)){
             if(!visited[ele]){
-                dfs(ele, visited);
+                dfs(adj,ele, visited);
             }
         }
     }
@@ -43,7 +43,7 @@ public class DFSAdjList {
         boolean[] visited = new boolean[5];
         for(int i = 0; i < 5; i++){
             if(!visited[i]){
-                dfs(i, visited);
+                dfs(g.adj, i, visited);
             }
         }
     }
