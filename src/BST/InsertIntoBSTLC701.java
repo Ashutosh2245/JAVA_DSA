@@ -68,6 +68,7 @@ public class InsertIntoBSTLC701 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of nodes: ");
         int n = sc.nextInt();
+
         System.out.println("Enter BST values (-1 for null):");
         TreeNode root = null;
         for (int i = 0; i < n; i++) {
@@ -77,6 +78,7 @@ public class InsertIntoBSTLC701 {
         }
         System.out.print("Enter value to insert: ");
         int insertVal = sc.nextInt();
+
         root = insertIntoBST(root, insertVal);
         System.out.println("Inorder after insertion:");
         inorder(root);
