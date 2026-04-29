@@ -30,40 +30,28 @@ public class RedundantConnectionIILC685 {
     }
 
     public static int[] findRedundantDirectedConnection(int[][] edges) {
-
         int n = edges.length;
         int[] parent = new int[n + 1];
-
-        int[] edge1 = null; // first parent edge
-        int[] edge2 = null; // second parent edge
-
-        // Step 1: detect node with 2 parents
+        int[] edge1 = null;
+        int[] edge2 = null;
         for (int[] e : edges) {
             int u = e[0], v = e[1];
-
             if (parent[v] == 0) {
                 parent[v] = u;
             } else {
                 edge1 = new int[]{parent[v], v};
                 edge2 = new int[]{u, v};
-                e[1] = 0; // invalidate second edge
+                e[1] = 0;
             }
         }
-
-        // Step 2: DSU to detect cycle
         DSU dsu = new DSU(n);
-
         for (int[] e : edges) {
-            if (e[1] == 0) continue; // skip invalid edge
-
+            if (e[1] == 0) continue;
             if (!dsu.union(e[0], e[1])) {
-                // cycle found
-                if (edge1 == null) return e; // Case 1
-                return edge1; // Case 3
+                if (edge1 == null) return e;
+                return edge1;
             }
         }
-
-        // Case 2
         return edge2;
     }
 
