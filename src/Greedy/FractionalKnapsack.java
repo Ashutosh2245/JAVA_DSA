@@ -1,33 +1,40 @@
 package Greedy;
 import java.util.*;
-class Item {
-    int value, weight;
-    Item(int v, int w) {
-        value = v;
-        weight = w;
-    }
-}
+
 public class FractionalKnapsack {
-    public static void main(String[] args) {
-        Item[] items = { new Item(60,10), new Item(100,20), new Item(120,30) };
-        int W = 50;
-        Arrays.sort(items, new Comparator<Item>() {
-            public int compare(Item a, Item b) {
-                double r1 = (double)a.value / a.weight;
-                double r2 = (double)b.value / b.weight;
-                return r2 > r1 ? 1 : r2 < r1 ? -1 : 0;
-            }
-        });
-        double totalValue = 0;
-        for(Item it : items) {
-            if(W >= it.weight) {
-                W -= it.weight;
-                totalValue += it.value;
+    public static double fractionalKnapsack(int[] val, int[] wt, int W) {
+
+        int n = val.length;
+
+        Integer[] idx = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            idx[i] = i;
+        }
+
+        Arrays.sort(idx, (a, b) -> Double.compare(
+                (double) val[b] / wt[b],
+                (double) val[a] / wt[a]
+        ));
+
+        double profit = 0.0;
+
+        for (int i : idx) {
+            if (wt[i] <= W) {
+                profit += val[i];
+                W -= wt[i];
             } else {
-                totalValue += it.value * ((double)W / it.weight);
+                profit += ((double) val[i] / wt[i]) * W;
                 break;
             }
         }
-        System.out.printf("Maximum value: %.2f\n", totalValue);
+        return profit;
+    }
+    public static void main(String[] args) {
+
+        int[] val = {60, 100, 120};
+        int[] wt = {10,20,30};
+        int cap = 50;
+        double ans = fractionalKnapsack(val,wt,cap);
+        System.out.println("Maximum value: "+ans);
     }
 }
