@@ -4,6 +4,7 @@ public class MaxSubArraySizeSlidingWindow {
 
         int n = arr.length;
         int left = 0, right = k-1, sum = 0;
+
         for (int i = 0; i < k; i++) {
             sum += arr[i];
         }

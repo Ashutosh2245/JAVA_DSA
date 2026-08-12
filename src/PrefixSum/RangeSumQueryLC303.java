@@ -1,22 +1,39 @@
 package PrefixSum;
 import java.util.*;
 
+//class NumArray {
+//    int[] arr;
+//
+//    public NumArray(int[] nums) {
+//        arr = Arrays.copyOf(nums, nums.length);
+//
+//        for(int i = 1; i < arr.length; i++){
+//            arr[i] += arr[i - 1];
+//        }
+//    }
+//
+//    public int sumRange(int left, int right) {
+//        if(left == 0) return arr[right];
+//
+//        return arr[right] - arr[left - 1];
+//    }
+
 class NumArray {
-    int[] arr;
+
+    int[] prefix;
 
     public NumArray(int[] nums) {
-        arr = Arrays.copyOf(nums, nums.length);
+        prefix = new int[nums.length + 1];
 
-        for(int i = 1; i < arr.length; i++){
-            arr[i] += arr[i - 1];
+        for (int i = 0; i < nums.length; i++) {
+            prefix[i + 1] = prefix[i] + nums[i];
         }
     }
 
     public int sumRange(int left, int right) {
-        if(left == 0) return arr[right];
-
-        return arr[right] - arr[left - 1];
+        return prefix[right + 1] - prefix[left];
     }
+
     // Range sum -> 0th index to right index - 0th index to left
 
     public static void main(String[] args) {

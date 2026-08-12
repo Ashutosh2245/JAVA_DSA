@@ -26,6 +26,7 @@ public class alphabetRectangle {
         }
     }
 }
+
 //METHOD 2// --->> Same alphabets will be printed in each column.
 //Enter the number of rows: 5
 //        Enter the number of columns: 5
