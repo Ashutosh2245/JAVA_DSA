@@ -9,8 +9,8 @@ public class MaxSubArraySizeSlidingWindow {
             sum += arr[i];
         }
         int maxSum = sum;
-
         left++; right++;
+
         while (right < n){
             sum = sum - arr[left-1] + arr[right];
             maxSum = Math.max(maxSum, sum);
