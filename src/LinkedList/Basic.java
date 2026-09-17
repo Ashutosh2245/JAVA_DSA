@@ -8,6 +8,7 @@ public class Basic {
 
         Node(int data) {
             this.data = data;
+            this.next = null;
         }
     }
 
@@ -23,11 +24,11 @@ public class Basic {
             Node newNode = new Node(sc.nextInt());
             if (head == null) {
                 head = newNode;
-                temp = newNode;
+
             } else {
                 temp.next = newNode;
-                temp = newNode;
             }
+            temp = newNode;
         }
 
         temp = head;

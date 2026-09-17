@@ -1,26 +1,26 @@
 package LinkedList;
 public class DeletionOfNode {
-    // Inner Node class
-    public static class Node3 {
-        public int data;
-        public Node3 next;
-        public Node3(int value) {
+
+    public static class Node {
+        int data;
+        Node next;
+        public Node(int value) {
             this.data = value;
             this.next = null;
         }
     }
-    // Delete from the beginning
-    public static Node3 deleteFromBeginning(Node3 head) {
+
+    public static Node deleteFromBeginning(Node head) {
         if (head == null) {
             System.out.println("List is empty. Cannot delete.");
             return null;
         }
-        Node3 newHead = head.next;
+        Node newHead = head.next;
         head.next = null; // disconnect old head
         return newHead;
     }
-    // Delete from the end
-    public static Node3 deleteFromEnd(Node3 head) {
+
+    public static Node deleteFromEnd(Node head) {
         if (head == null) {
             System.out.println("List is empty. Cannot delete.");
             return null;
@@ -28,7 +28,7 @@ public class DeletionOfNode {
         if (head.next == null) {
             return null; // only one node
         }
-        Node3 current = head;
+        Node current = head;
         while (current.next.next != null) {
             current = current.next;
         }
@@ -36,17 +36,17 @@ public class DeletionOfNode {
         return head;
     }
     // Delete by value
-    public static Node3 deleteNode(Node3 head, int value) {
+    public static Node deleteNode(Node head, int value) {
         if (head == null) {
             System.out.println("List is empty. Cannot delete.");
             return null;
         }
         if (head.data == value) {
-            Node3 newHead = head.next;
+            Node newHead = head.next;
             head.next = null;
             return newHead;
         }
-        Node3 current = head;
+        Node current = head;
         while (current.next != null && current.next.data != value) {
             current = current.next;
         }
@@ -54,13 +54,13 @@ public class DeletionOfNode {
             System.out.println("Node with value " + value + " not found.");
             return head;
         }
-        Node3 temp = current.next;
+        Node temp = current.next;
         current.next = current.next.next;
         temp.next = null;
         return head;
     }
     // Delete at position (0-based index)
-    public static Node3 deleteAtPosition(Node3 head, int pos) {
+    public static Node deleteAtPosition(Node head, int pos) {
         if (head == null || pos < 0) {
             System.out.println("Invalid position or empty list.");
             return head;
@@ -68,7 +68,7 @@ public class DeletionOfNode {
         if (pos == 0) {
             return deleteFromBeginning(head);
         }
-        Node3 current = head;
+        Node current = head;
         for (int i = 0; current != null && i < pos - 1; i++) {
             current = current.next;
         }
@@ -76,13 +76,13 @@ public class DeletionOfNode {
             System.out.println("Position out of range.");
             return head;
         }
-        Node3 temp = current.next;
+        Node temp = current.next;
         current.next = current.next.next;
         temp.next = null;
         return head;
     }
     // Display linked list
-    public static void displayLinkedList(Node3 head) {
+    public static void displayLinkedList(Node head) {
         if (head == null) {
             System.out.println("List is empty.");
             return;
@@ -95,10 +95,10 @@ public class DeletionOfNode {
     }
     public static void main(String[] args) {
         // Create a sample linked list: 1 -> 2 -> 3 -> 4
-        Node3 head = new Node3(1);
-        head.next = new Node3(2);
-        head.next.next = new Node3(3);
-        head.next.next.next = new Node3(4);
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
         System.out.println("Original List:");
         displayLinkedList(head);
         head = deleteFromBeginning(head);
