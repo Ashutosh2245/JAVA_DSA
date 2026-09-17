@@ -91,15 +91,18 @@ class SinglyLinkedList1 {
             return;
         }
         Node temp = new Node(val);
+
         if (idx == 0) {  // insert at head
             temp.next = head;
             head = temp;
             if (size == 0) tail = temp;
         }
+
         else if (idx == size) {   // insert at tail
             tail.next = temp;
             tail = temp;
         }
+
         else {  // insert in middle
             Node x = head;
             for (int i = 1; i < idx; i++) {
@@ -110,8 +113,12 @@ class SinglyLinkedList1 {
         }
         size++;
     }
-    void insertAtHead(int val){ insertAtIndex(0,val); }
-    void insertAtTail(int val){ insertAtIndex(size,val); }
+    void insertAtHead(int val){
+        insertAtIndex(0,val);
+    }
+    void insertAtTail(int val){
+        insertAtIndex(size,val);
+    }
     void print(){
         Node temp = head;
         while (temp != null) {
@@ -127,6 +134,7 @@ public class InsertAtAnyIndex {
         list.insertAtHead(10);
         list.insertAtHead(20);
         list.insertAtTail(30);
+        list.print();
         list.insertAtIndex(3,70);
         list.insertAtHead(40);
         list.print();
