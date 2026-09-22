@@ -20,6 +20,7 @@ public class SufficientNodeLC1080 {
         int i = 1;
         while (!q.isEmpty() && i < arr.length){
             Node curr = q.poll();
+
             if(i < arr.length && arr[i] != -1){
                 curr.left = new Node(arr[i]);
                 q.add(curr.left);

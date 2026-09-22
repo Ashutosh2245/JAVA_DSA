@@ -12,6 +12,7 @@ public class BFSAdjacencyList {
             adj.add(new ArrayList<>());
         }
     }
+
     void addEdge (int u, int v){
         adj.get(u).add(v);
         adj.get(v).add(u);

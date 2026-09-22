@@ -16,8 +16,15 @@ class Intersection {
         ListNode6 b = headB;
 
         while (a != b) {
-            a = (a == null) ? headB : a.next;
-            b = (b == null) ? headA : b.next;
+            if(a == null){
+                a = headB;
+            }
+            else a = a.next;
+
+            if(b == null){
+                b = headA;
+            }
+            else b = b.next;
         }
 
         return a;
