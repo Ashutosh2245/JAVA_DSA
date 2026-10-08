@@ -3,6 +3,7 @@ public class OverflowAndUnderflow {
     static final int MAX = 5;
     int top = -1;
     int[] stack = new int[MAX];
+
     void push(int data) {
         if (top == MAX - 1) {
             System.out.println("Stack Overflow! Cannot push " + data);
@@ -10,6 +11,7 @@ public class OverflowAndUnderflow {
         }
         stack[++top] = data;
     }
+
     int pop() {
         if (top == -1) {
             System.out.println("Stack Underflow! Nothing to pop.");

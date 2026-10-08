@@ -7,10 +7,12 @@ public class ImplementStackUsingQueue {
     public ImplementStackUsingQueue() {
         q = new LinkedList<>();
     }
+
     // PUSH is efficient → O(1)
     public void push(int x) {
         q.add(x);
     }
+
     // POP is costly → O(n)
     public int pop() {
         if (q.isEmpty()) {
@@ -22,6 +24,7 @@ public class ImplementStackUsingQueue {
         }
         return q.remove();
     }
+
     // TOP is costly → O(n)
     public int top() {
         if (q.isEmpty()) {

@@ -63,14 +63,18 @@ public class ReverseLLLC206 {
             this.next = null;
         }
     }
+
     public static Node reverse(Node head){
        if (head==null || head.next==null) return head;
-       Node a = head.next;
-       Node newHead = reverse(a);
-       a.next = head;
+
+       Node newHead = reverse(head.next);
+
+       head.next.next = head;
        head.next = null;
+
        return newHead;
     }
+
     public void printList(Node head) {
         while (head != null) {
             System.out.print(head.val + " ");
