@@ -8,6 +8,7 @@ public class TrimBSTLC669 {
             this.val = val;
         }
     }
+    
     public static Node buildBST(Node root, int val){
         if (root == null) return new Node(val);
         if(val < root.val){

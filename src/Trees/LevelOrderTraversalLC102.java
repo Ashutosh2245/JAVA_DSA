@@ -10,12 +10,12 @@ public class LevelOrderTraversalLC102 {
         }
     }
     static TreeNode buildTree(int[] arr) {
-        if (arr.length == 0 || arr[0] == -1)
-            return null;
+        if (arr.length == 0 || arr[0] == -1) return null;
         TreeNode root = new TreeNode(arr[0]);
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
         int i = 1;
+
         while (!q.isEmpty() && i < arr.length) {
             TreeNode curr = q.poll();
             if (i < arr.length && arr[i] != -1) {

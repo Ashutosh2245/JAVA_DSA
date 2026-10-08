@@ -34,7 +34,7 @@ public class BinaryTreePathsLC257 {
         }
         return root;
     }
-    // Your solution logic
+
     public static class Solution {
         public static void path(TreeNode root, String s, List<String> ans) {
             if (root == null) return;
