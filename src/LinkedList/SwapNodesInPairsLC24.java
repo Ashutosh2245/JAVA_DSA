@@ -4,8 +4,11 @@ public class SwapNodesInPairsLC24 {
     public static class ListNode {
         int val;
         ListNode next;
-        ListNode(int val) { this.val = val; }
+        ListNode(int val) {
+            this.val = val;
+        }
     }
+
     public static ListNode swapPairs(ListNode head) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -13,14 +16,17 @@ public class SwapNodesInPairsLC24 {
         while (head != null && head.next != null) {
             ListNode first = head;
             ListNode second = head.next;
+
             prev.next = second;
             first.next = second.next;
             second.next = first;
+
             prev = first;
             head = first.next;
         }
         return dummy.next;
     }
+
     public static void printList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + " ");
@@ -28,6 +34,7 @@ public class SwapNodesInPairsLC24 {
         }
         System.out.println();
     }
+
     public static ListNode createList(int[] arr) {
         if (arr.length == 0) return null;
         ListNode head = new ListNode(arr[0]);
@@ -38,6 +45,7 @@ public class SwapNodesInPairsLC24 {
         }
         return head;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of nodes in the list: ");
