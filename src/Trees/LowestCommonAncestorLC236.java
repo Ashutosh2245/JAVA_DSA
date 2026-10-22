@@ -32,6 +32,7 @@ public class LowestCommonAncestorLC236 {
         }
         return root;
     }
+
     static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root.val == p.val || root.val == q.val)
             return root;
@@ -39,11 +40,13 @@ public class LowestCommonAncestorLC236 {
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if (left != null && right != null)
-            return root;
+        if (left != null && right != null) return root;
 
-        return (left != null) ? left : right;
+        if(left != null) return left;
+        else return right;
+
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
