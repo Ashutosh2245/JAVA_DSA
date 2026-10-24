@@ -6,8 +6,8 @@ public class starTriangle {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value of n: ");
         n = sc.nextInt();
-        for(int i=1;i<=n;i++){ //rows
-            for(int j=1;j<=i;j++){ //columns
+        for(int i=1;i<=n;i++){ // row
+            for(int j=1;j<=i;j++){ // column
                 System.out.print("* ");
             }
             System.out.println();
