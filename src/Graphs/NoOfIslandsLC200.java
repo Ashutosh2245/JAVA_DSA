@@ -70,7 +70,7 @@ public class NoOfIslandsLC200 {
                 {'0','0','0','0','0'}
         };
         int ans = numIslands(grid);
-        System.out.println("No of islands: "+ans);
+        System.out.println("Total No of islands: "+ans);
     }
 }
 
