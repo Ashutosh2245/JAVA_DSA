@@ -28,6 +28,6 @@ public class NoOfProvincesDFSLC547 {
                 {0,0,1}
         };
         int count = findCircleNum(adj);
-        System.out.print("No of provinces: "+count);
+        System.out.print("Total No of provinces: "+count);
     }
 }
