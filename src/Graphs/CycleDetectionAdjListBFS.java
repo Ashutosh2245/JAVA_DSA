@@ -68,6 +68,6 @@ public class CycleDetectionAdjListBFS {
                 {1, 2},
                 {2, 3}
         };
-        System.out.println("Cycle Present (BFS): " + isCycle(V, edges));
+        System.out.println("Is Cycle Present (BFS): " + isCycle(V, edges));
     }
 }
