@@ -106,7 +106,7 @@ public class KeysAndRoomsLC841 {
             rooms.add(temp);
         }
 
-        System.out.print("Can visit all rooms: ");
+        System.out.print("Can we visit all rooms: ");
         System.out.println(canVisitAllRooms(rooms));
     }
 }
