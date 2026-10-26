@@ -84,6 +84,6 @@ public class FindIfPathExistsLC1971 {
         int start = 0;
         int end = 5;
         boolean ans = validPath(n, edges, start, end);
-        System.out.println("Is valid path: "+ans);
+        System.out.println("Is it valid path: "+ans);
     }
 }
