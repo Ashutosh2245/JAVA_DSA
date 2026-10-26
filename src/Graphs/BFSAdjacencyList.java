@@ -18,7 +18,7 @@ public class BFSAdjacencyList {
         adj.get(v).add(u);
     }
 
-    static void bfs(int start, boolean[] visited,ArrayList <ArrayList<Integer>> adj){
+    public static void bfs(int start, boolean[] visited,ArrayList <ArrayList<Integer>> adj){
         Queue <Integer> q = new LinkedList<>();
         visited[start] = true;
         q.add(start);
