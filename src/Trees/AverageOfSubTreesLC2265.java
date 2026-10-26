@@ -3,11 +3,11 @@ import java.util.*;
 public class AverageOfSubTreesLC2265 {
     static int ans = 0;
     public static class Node{
-        int val;
+        int data;
         Node left;
         Node right;
         Node(int val){
-            this.val = val;
+            this.data = val;
             this.left = null;
             this.right = null;
         }
@@ -46,11 +46,11 @@ public class AverageOfSubTreesLC2265 {
         int[] left = dfs(root.left);
         int[] right = dfs(root.right);
 
-        sum = root.val + left[0] + right[0];
+        sum = root.data + left[0] + right[0];
         count = 1 + left[1] + right[1];
 
         avg = sum/count;
-        if(avg == root.val) ans++;
+        if(avg == root.data) ans++;
         return new int[] {sum, count};
     }
     public static void main(String[] args) {
