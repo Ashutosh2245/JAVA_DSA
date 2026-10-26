@@ -34,7 +34,7 @@ public class FloydWarshall{
             }
         }
         floydWarshall(dist);
-        System.out.println("\nShortest distance matrix:");
+        System.out.println("\nThe Shortest distance matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (dist[i][j] == INF) {
