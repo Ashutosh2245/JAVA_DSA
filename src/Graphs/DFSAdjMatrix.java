@@ -16,11 +16,11 @@ public class DFSAdjMatrix {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number of vertices: ");
+        System.out.print("Enter the number of vertices: ");
         int n = sc.nextInt();
 
         int[][] adj = new int[n][n];
-        System.out.println("Enter adjacency matrix:");
+        System.out.println("Enter the adjacency matrix:");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 adj[i][j] = sc.nextInt();
