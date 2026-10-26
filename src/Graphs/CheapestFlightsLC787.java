@@ -3,7 +3,7 @@ import java.util.*;
 public class CheapestFlightsLC787 {
 
     public static int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-        List<List<int[]>> graph = new ArrayList<>();
+        ArrayList<ArrayList<int[]>> graph = new ArrayList<>();
         for (int i = 0; i < n; i++) graph.add(new ArrayList<>());
 
         for (int[] f : flights) {
