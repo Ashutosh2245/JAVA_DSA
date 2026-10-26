@@ -3,7 +3,7 @@ import java.util.*;
 public class BipartiteGraphLC785 {
     public static boolean bfs(int start, int[][] graph, int[] visited) {
         Queue<Integer> q = new LinkedList<>();
-        visited[start] = 0;   // 0 = Blue, 1 = Red
+        visited[start] = 0;   //1 = Red, 0 = Blue
         q.add(start);
         while (!q.isEmpty()) {
             int front = q.poll();
