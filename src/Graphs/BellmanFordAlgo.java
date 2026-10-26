@@ -8,7 +8,7 @@ public class BellmanFordAlgo {
         Arrays.fill(dist, (int)1e8);
         dist[src] = 0;
 
-        // Step 2: Relax edges V-1 times
+        // Step 2: Relax the edges V-1 times
         for (int i = 0; i < V - 1; i++) {
             for (int[] edge : edges) {
                 int u = edge[0];
