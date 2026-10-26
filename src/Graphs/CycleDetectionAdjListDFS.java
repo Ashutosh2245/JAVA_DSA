@@ -53,6 +53,6 @@ public class CycleDetectionAdjListDFS {
                 {1, 2},
                 {2, 3}
         };
-        System.out.println("Cycle Present (DFS): " + isCycle(V, edges));
+        System.out.println("Is Cycle Present (DFS): " + isCycle(V, edges));
     }
 }
