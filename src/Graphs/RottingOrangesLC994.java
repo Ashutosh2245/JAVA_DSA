@@ -48,6 +48,6 @@ public class RottingOrangesLC994 {
     public static void main(String[] args) {
         int[][] grid = {{2,1,1},{1,1,0},{0,1,1}};
         int ans = orangesRotting(grid);
-        System.out.println("Minimum minutes: "+ans);
+        System.out.println("The Minimum minutes: "+ans);
     }
 }
