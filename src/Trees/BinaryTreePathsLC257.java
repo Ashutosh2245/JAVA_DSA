@@ -54,7 +54,7 @@ public class BinaryTreePathsLC257 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the no of tree nodes: ");
+        System.out.print("Enter no of the tree nodes: ");
         int n = sc.nextInt();
         System.out.print("Enter the nodes: ");
         int[] arr = new int[n];
