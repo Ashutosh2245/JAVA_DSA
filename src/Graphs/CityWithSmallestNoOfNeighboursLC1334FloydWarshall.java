@@ -57,10 +57,10 @@ public class CityWithSmallestNoOfNeighboursLC1334FloydWarshall {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of cities: ");
+        System.out.print("Enter the number of cities: ");
         int n = sc.nextInt();
 
-        System.out.print("Enter number of edges: ");
+        System.out.print("Enter the number of edges: ");
         int m = sc.nextInt();
 
         int[][] edges = new int[m][3];
