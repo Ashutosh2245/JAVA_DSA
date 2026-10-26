@@ -47,6 +47,6 @@ public class MinimumEffortPathLC1631 {
                 {5,3,5}
         };
 
-        System.out.println("Minimum Effort Path: "+minimumEffortPath(heights)); // Output: 2
+        System.out.println("The Minimum Effort Path: "+minimumEffortPath(heights)); // Output: 2
     }
 }
