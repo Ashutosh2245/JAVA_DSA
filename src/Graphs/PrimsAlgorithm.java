@@ -61,7 +61,7 @@ public class PrimsAlgorithm {
         addEdge(graph, 3, 4, 9);
 
         int result = primMST(graph, n);
-        System.out.println("MST Weight: " + result);
+        System.out.println("Total MST Weight: " + result);
     }
     static void addEdge(List<List<Edge>> graph, int u, int v, int w) {
         graph.get(u).add(new Edge(v, w));
