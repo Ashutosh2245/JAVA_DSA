@@ -51,6 +51,6 @@ public class CycleDetectionBFSGfg {
                 {0,1,0,1},
                 {1,0,1,0}
         };
-        System.out.println("Cycle Present: " + isCycle(adj));
+        System.out.println("Is Cycle Present: " + isCycle(adj));
     }
 }
