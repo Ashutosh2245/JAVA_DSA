@@ -70,6 +70,6 @@ public class NoOfEnclavesLC1020 {
         int enclaves = numEnclaves(grid);
 
         System.out.println("\nNumber of Enclaves: " + enclaves);
-        System.out.println("Boundary-connected lands removed successfully using Multi-Source BFS.");
+        System.out.println("The Boundary-connected lands removed successfully using Multi-Source BFS.");
     }
 }
