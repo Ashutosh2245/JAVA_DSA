@@ -47,6 +47,6 @@ public class NetworkDelayTimeLC743 {
         int[][] arr = {{2,1,1},{2,3,1},{3,4,1}};
         int n = 4, k = 2;
         int ans = networkDelayTime(arr, n, k);
-        System.out.println("Minimum Time: "+ans);
+        System.out.println("The Minimum Time: "+ans);
     }
 }
