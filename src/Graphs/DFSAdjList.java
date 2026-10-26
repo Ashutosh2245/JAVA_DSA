@@ -19,12 +19,12 @@ public class DFSAdjList {
         adj.get(v).add(u);   // remove for directed
     }
 
-    static void dfs(ArrayList<ArrayList<Integer>> adj,int start, boolean[] visited){
+    static void dfs(ArrayList<ArrayList<Integer>> adj,int st, boolean[] visited){
 
-        visited[start] = true;
-        System.out.print(start + " ");
+        visited[st] = true;
+        System.out.print(st + " ");
 
-        for(int ele : adj.get(start)){
+        for(int ele : adj.get(st)){
             if(!visited[ele]){
                 dfs(adj,ele, visited);
             }
