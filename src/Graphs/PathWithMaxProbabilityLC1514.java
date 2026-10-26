@@ -48,7 +48,7 @@ public class PathWithMaxProbabilityLC1514  {
         double[] succProb = {0.5,0.5,0.2};
         int start = 0, end = 2;
         double ans = maxProbability(n, edges, succProb, start, end);
-        System.out.println("Max Probability: "+ans);
+        System.out.println("The Max Probability: "+ans);
     }
 }
 
