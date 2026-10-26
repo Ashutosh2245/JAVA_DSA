@@ -93,6 +93,6 @@ public class MinCostToConnectAllPointsLC1584{
     public static void main(String[] args) {
         int[][] arr = {{0,0},{2,2},{3,10},{5,2},{7,0}};
         int minCost = minCostConnectPoints(arr);
-        System.out.println("Minimum cost to connect all points: "+minCost);
+        System.out.println("The Minimum cost to connect all points: "+minCost);
     }
 }
