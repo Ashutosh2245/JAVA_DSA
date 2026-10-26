@@ -92,6 +92,6 @@ class Kruskal {
         edges.add(new Edge(3, 4, 9));
 
         int result = kruskalMST(edges, n);
-        System.out.println("MST Weight: " + result);
+        System.out.println("The MST Weight: " + result);
     }
 }
