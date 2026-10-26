@@ -56,6 +56,6 @@ public class BalancedBTLC110 {
             arr[i] = sc.nextInt();
         }
         Node root = BuildBT(arr);
-        System.out.print("Binary tree is balanced? : "+isBalanced(root));
+        System.out.print("Binary tree is balanced or not ? : "+isBalanced(root));
     }
 }
