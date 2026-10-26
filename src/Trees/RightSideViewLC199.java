@@ -42,9 +42,9 @@ public class RightSideViewLC199 {
         dfs(root.left,level+1,ans);
         dfs(root.right,level+1,ans);
     }
-    public static List <Integer> rightSideView(Node root){
+    public static ArrayList <Integer> rightSideView(Node root){
         int n = levels(root);
-        List<Integer> ans = new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             ans.add(0);
         }
