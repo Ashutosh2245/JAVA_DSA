@@ -45,9 +45,9 @@ public class TopologicalSortBFS {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the no of vertices: ");
+        System.out.print("Enter no of vertices: ");
         int n = sc.nextInt();
-        System.out.print("\nEnter the no of edges: ");
+        System.out.print("\nEnter no of edges: ");
         int m = sc.nextInt();
         int[][] edges = new int[m][2];
 
