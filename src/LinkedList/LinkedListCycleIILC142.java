@@ -42,7 +42,7 @@ class LinkedListCycleIILC142{
             curr.next = new Node(sc.nextInt());
             curr = curr.next;
         }
-        System.out.print("Enter position which is connected: ");
+        System.out.print("Enter the position which is connected: ");
         int pos = sc.nextInt();
         if (pos != -1) {
             Node cycleStart = head;
