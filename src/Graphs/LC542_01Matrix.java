@@ -54,7 +54,7 @@ public class LC542_01Matrix {
                 {1,1,1}
         };
 
-        System.out.println("Original Matrix:");
+        System.out.println("The Original Matrix:");
         for(int[] row : grid)
             System.out.println(Arrays.toString(row));
 
