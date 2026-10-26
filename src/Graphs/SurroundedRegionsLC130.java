@@ -61,6 +61,6 @@ public class SurroundedRegionsLC130 {
         for(char[] row : board)
             System.out.println(Arrays.toString(row));
 
-        System.out.println("\nAll surrounded regions converted successfully.");
+        System.out.println("\nAll the surrounded regions converted successfully.");
     }
 }
