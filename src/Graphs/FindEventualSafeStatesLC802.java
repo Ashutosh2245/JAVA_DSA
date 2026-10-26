@@ -53,15 +53,15 @@ class Solution {
 
         int n = graph.length;
         int[] state = new int[n];
-        ArrayList<Integer> ans = new ArrayList<>();
+        ArrayList<Integer> answer = new ArrayList<>();
 
         for(int i = 0; i < n; i++){
             if(dfs(i, graph, state)){
-                ans.add(i);
+                answer.add(i);
             }
         }
 
-        return ans;
+        return answer;
     }
 
     static boolean dfs(int node, int[][] graph, int[] state){
