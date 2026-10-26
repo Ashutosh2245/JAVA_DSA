@@ -67,9 +67,9 @@ public class Dijkstra{
             //adj.get(v).add(new Pair(u,w)); // if undirected
         }
 
-        System.out.print("Enter source node: ");
+        System.out.print("Enter the source node: ");
         int src = sc.nextInt();
-        System.out.print("Enter destination node: ");
+        System.out.print("Enter the destination node: ");
         int dest = sc.nextInt();
 
         dijkstra(V, adj, src, dest);
