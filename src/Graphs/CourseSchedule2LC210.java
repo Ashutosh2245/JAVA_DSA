@@ -106,13 +106,13 @@ public class CourseSchedule2LC210 {
     private static boolean hasCycle(ArrayList<ArrayList<Integer>> adj, int[] state, Stack<Integer> stack, int node) {
         state[node] = 1; // visiting
 
-        for(int neighbour : adj.get(node)) {
+        for(int nei : adj.get(node)) {
 
-            if(state[neighbour] == 1)
+            if(state[nei] == 1)
                 return true;   // cycle
 
-            if(state[neighbour] == 0) {
-                if(hasCycle(adj, state, stack, neighbour))
+            if(state[nei] == 0) {
+                if(hasCycle(adj, state, stack, nei))
                     return true;
             }
         }
