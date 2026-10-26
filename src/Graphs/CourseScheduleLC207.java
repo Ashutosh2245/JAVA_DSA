@@ -118,6 +118,6 @@ public class CourseScheduleLC207{
                 {2, 3}
         };
 
-        System.out.println("Can finish all courses: " +canFinish(n, edges));
+        System.out.println("Can finish the all courses: " +canFinish(n, edges));
     }
 }
