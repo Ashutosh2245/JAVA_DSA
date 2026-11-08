@@ -14,6 +14,6 @@ public class MaxSumSubArrayKadane {
                 currSum = 0;
             }
         }
-        System.out.println(maxSum);
+        System.out.println("Max Sum: " + maxSum);
     }
 }
